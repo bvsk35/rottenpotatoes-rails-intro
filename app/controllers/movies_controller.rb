@@ -14,7 +14,7 @@ class MoviesController < ApplicationController
     @movies = Movie.all
     @all_ratings = Movie.ratings
     @sort_column = params[:sort] || session[:sort]
-    session[:ratings] = session[:ratings] || {'G'=>'','R'=>'','PG-13'=>'','PG'=>''}
+    session[:ratings] = session[:ratings] || {'G'=>'','R'=>'','PG-13'=>'','PG'=>''} 
     @var_param = params[:ratings] || session[:ratings]
     session[:sort] = @sort_column
     session[:ratings] = @var_param
